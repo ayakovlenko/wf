@@ -1,4 +1,4 @@
-import { Item } from "https://raw.githubusercontent.com/ayakovlenko/wf/0.0.2/lib.ts";
+import { Template } from "https://raw.githubusercontent.com/ayakovlenko/wf/0.0.3/lib.ts";
 import { format } from "https://deno.land/std@0.93.0/datetime/mod.ts";
 
 const weekday = [
@@ -13,7 +13,7 @@ const weekday = [
 
 const d = new Date();
 
-const template: Item[] = [
+Template([
   {
     text: format(d, "yyyy-MM-dd"),
     note: weekday[d.getDay()],
@@ -26,6 +26,4 @@ const template: Item[] = [
       },
     ],
   },
-];
-
-export default template;
+]);
