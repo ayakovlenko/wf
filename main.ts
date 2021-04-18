@@ -1,10 +1,11 @@
-import { Item } from "./lib.ts";
-import { toXml } from "./mod.ts";
-
 const templateName = Deno.args[0];
 
-const { default: template } = await import(templateName) as { default: Item[] };
+const p = Deno.run({
+  cmd: ["deno", "run", templateName],
+});
 
-console.log(toXml(template));
+await p.status();
+
+p.close();
 
 export {};

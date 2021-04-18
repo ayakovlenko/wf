@@ -2,8 +2,11 @@
 
 ```sh
 # install wf
-deno install -f --allow-read main.ts
+deno install -f --allow-run main.ts
 ```
+
+`wf` needs the run permission only to execute a template.
+Template execution is fully sandboxed.
 
 ```sh
 # run example
