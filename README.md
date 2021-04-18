@@ -1,5 +1,9 @@
 # wf
 
+Previous version [here](https://github.com/ayakovlenko/wf-go).
+
+---
+
 ```sh
 # install wf
 deno install -f --allow-run main.ts
