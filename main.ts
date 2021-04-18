@@ -1,7 +1,10 @@
+import { Item } from "./lib.ts";
+import { toXml } from "./mod.ts";
+
 const templateName = Deno.args[0];
 
-const { default: template } = await import(templateName);
+const { default: template } = await import(templateName) as { default: Item[] };
 
-console.log(JSON.stringify(template, null, 2));
+console.log(toXml(template));
 
 export {};
