@@ -1,0 +1,8 @@
+scripts:
+  start:
+    cmd: main.ts ./examples/templates/daily.ts
+    allow:
+      read: true
+      run: true
+  test:
+    cmd: deno test .
